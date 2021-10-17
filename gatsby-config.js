@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/gatsby-github-blog",
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Gatsby with Markdown",
