@@ -1,0 +1,58 @@
+---
+title: "Another Post"
+date: "2021-07-24"
+---
+
+Here's another post! It's even better than the first one!
+
+# 1 - Prepare your computer for writing code
+
+## Getting SDK
+
+```
+$ git clone -b master https://github.com/raspberrypi/pico-sdk.git
+$ cd pico-sdk
+$ git submodule update --init
+$ cd ..
+$ git clone -b master https://github.com/raspberrypi/pico-examples.git
+```
+
+### Adding Path of SDK to environment variables:
+
+```
+$ vim ~/.zshrc
+export PICO_SDK_PATH="/home/ahmad/Documents/Pico/pico-sdk"
+```
+
+## Toolchain Installation
+
+```
+$ sudo apt update
+$ sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
+```
+
+Ubuntu and Debian users might additionally need to also install libstdc++-arm-none-eabi-newlib.
+
+```
+$ sudo apt install libstdc++-arm-none-eabi-newlib
+```
+
+# 2 - Test your Toolchain with Blink-LED examples
+
+$ cd pico-examples
+$ mkdir build
+$ cd build
+
+$ export PICO_SDK_PATH=../../pico-sdk
+
+$ cmake ..
+$ cd blink
+$ make -j4
+
+# 3 - Using VSCode
+
+## VScode Installation
+
+## Extensions
+
+# 4 - Create a new project with VSCode
